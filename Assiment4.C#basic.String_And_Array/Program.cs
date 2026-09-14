@@ -1,4 +1,6 @@
-﻿namespace Assiment4.String_And_Array
+﻿using System.Text;
+
+namespace Assiment4.String_And_Array
 {
     class Program
     {
@@ -160,8 +162,10 @@
             //
             // Print the final result.
 
-
-
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("Book List");
+            stringBuilder.Append(" - Updated");
+            Console.WriteLine(stringBuilder);
             #endregion
 
 
