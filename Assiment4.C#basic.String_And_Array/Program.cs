@@ -221,7 +221,8 @@ namespace Assiment4.String_And_Array
             //
             // using:
             // string.Format()
-           
+            string sentence = string.Format("Book: {0}, Pages: {1}", Title, pages);
+            Console.WriteLine(sentence);
 
             #endregion
         }
