@@ -32,7 +32,7 @@
             // "Welcome to the Library!"
             // Call it from Main.
 
-
+            //PrintWelcomeMessage();
 
             #endregion
 
@@ -126,8 +126,10 @@
             //
             // Print both title and upperTitle
             // to show that title did not change.
-
-
+            string title = "clean code";
+            string upperTitle = title.ToUpper();
+            Console.WriteLine(title);
+            Console.WriteLine(upperTitle);
 
             #endregion
 
@@ -219,7 +221,9 @@
         #region Methods
 
         // Question 3 method
-
+        void PrintWelcomeMessage() {
+            Console.WriteLine("Welcome to the Library!");
+               }
 
         // Question 4 method
 
