@@ -1,4 +1,6 @@
-﻿namespace Assiment4.String_And_Array
+﻿using System.Text;
+
+namespace Assiment4.String_And_Array
 {
     class Program
     {
@@ -20,8 +22,8 @@
             // Shelf 0 has: 3, 5
             // Shelf 1 has: 1, 4
             // Print the number of copies on shelf 1, slot 0.
-
-
+            int [,] shelfCopies = { { 3, 5 }, { 1, 4 } };
+            Console.WriteLine(shelfCopies[1,0]);
 
             #endregion
 
@@ -32,7 +34,7 @@
             // "Welcome to the Library!"
             // Call it from Main.
 
-
+            //PrintWelcomeMessage();
 
             #endregion
 
@@ -126,8 +128,10 @@
             //
             // Print both title and upperTitle
             // to show that title did not change.
-
-
+            string title = "clean code";
+            string upperTitle = title.ToUpper();
+            Console.WriteLine(title);
+            Console.WriteLine(upperTitle);
 
             #endregion
 
@@ -140,7 +144,9 @@
             // Use ReferenceEquals()
             // to check if they point to the same object in memory.
 
-
+            string str1 = "Clean Code";
+            string str2 = "Clean Code";
+            Console.WriteLine(ReferenceEquals(str1,str2));
 
             #endregion
 
@@ -156,8 +162,10 @@
             //
             // Print the final result.
 
-
-
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("Book List");
+            stringBuilder.Append(" - Updated");
+            Console.WriteLine(stringBuilder);
             #endregion
 
 
@@ -171,7 +179,8 @@
             // "Library"
             //
             // Print the result.
-
+            stringBuilder.Replace("Book List", "Library");
+            Console.WriteLine(stringBuilder);
 
 
             #endregion
@@ -187,7 +196,9 @@
             //
             // using the + operator.
 
-
+            string Title = "Clean Code";
+            int pages = 464;
+            Console.WriteLine("Book: "+Title+ ", Pages: "+pages);
 
             #endregion
 
@@ -198,7 +209,7 @@
             //
             // using string interpolation:
             // $"..."
-
+            Console.WriteLine($"Book: {Title}, Pages: {pages}");
 
 
             #endregion
@@ -210,8 +221,8 @@
             //
             // using:
             // string.Format()
-
-
+            string sentence = string.Format("Book: {0}, Pages: {1}", Title, pages);
+            Console.WriteLine(sentence);
 
             #endregion
         }
@@ -219,7 +230,9 @@
         #region Methods
 
         // Question 3 method
-
+        void PrintWelcomeMessage() {
+            Console.WriteLine("Welcome to the Library!");
+               }
 
         // Question 4 method
 
