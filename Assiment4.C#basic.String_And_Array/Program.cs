@@ -209,7 +209,7 @@ namespace Assiment4.String_And_Array
             //
             // using string interpolation:
             // $"..."
-
+            Console.WriteLine($"Book: {Title}, Pages: {pages}");
 
 
             #endregion
@@ -221,8 +221,7 @@ namespace Assiment4.String_And_Array
             //
             // using:
             // string.Format()
-
-
+           
 
             #endregion
         }
