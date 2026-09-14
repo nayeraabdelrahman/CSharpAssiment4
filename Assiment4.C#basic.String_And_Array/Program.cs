@@ -196,7 +196,9 @@ namespace Assiment4.String_And_Array
             //
             // using the + operator.
 
-
+            string Title = "Clean Code";
+            int pages = 464;
+            Console.WriteLine("Book: "+Title+ ", Pages: "+pages);
 
             #endregion
 
