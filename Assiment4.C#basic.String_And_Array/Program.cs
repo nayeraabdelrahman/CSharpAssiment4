@@ -142,7 +142,9 @@
             // Use ReferenceEquals()
             // to check if they point to the same object in memory.
 
-
+            string str1 = "Clean Code";
+            string str2 = "Clean Code";
+            Console.WriteLine(ReferenceEquals(str1,str2));
 
             #endregion
 
