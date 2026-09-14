@@ -179,7 +179,8 @@ namespace Assiment4.String_And_Array
             // "Library"
             //
             // Print the result.
-
+            stringBuilder.Replace("Book List", "Library");
+            Console.WriteLine(stringBuilder);
 
 
             #endregion
