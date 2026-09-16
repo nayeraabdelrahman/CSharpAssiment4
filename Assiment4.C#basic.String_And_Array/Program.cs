@@ -1,4 +1,7 @@
-﻿namespace Assiment4.String_And_Array
+﻿using System.Diagnostics;
+using System.Text;
+
+namespace Assiment4.String_And_Array
 {
     class Program
     {
@@ -20,8 +23,8 @@
             // Shelf 0 has: 3, 5
             // Shelf 1 has: 1, 4
             // Print the number of copies on shelf 1, slot 0.
-
-
+            int [,] shelfCopies = { { 3, 5 }, { 1, 4 } };
+            Console.WriteLine(shelfCopies[1,0]);
 
             #endregion
 
@@ -32,7 +35,7 @@
             // "Welcome to the Library!"
             // Call it from Main.
 
-
+            PrintWelcomeMessage();
 
             #endregion
 
@@ -43,7 +46,7 @@
             // "Book title: " + title
             // Call it with "Clean Code".
 
-
+            PrintBookTitle("Clean Code");
 
             #endregion
 
@@ -59,9 +62,11 @@
             //
             // Question:
             // What do you expect to see, and why?
-
-
-
+            int Pages = 400;
+            AddBonusPages(Pages);
+            Console.WriteLine($"No of pages : {Pages}");
+            // I expect the result to be 400 because pages is passed by value,
+            // so the original variable does not change.
             #endregion
 
 
@@ -77,8 +82,11 @@
             // Question:
             // What do you expect to see, and why?
 
-
-
+            double[] prices2 = { 25.5, 40.0 };
+            ApplyDiscount(prices2);
+            Console.WriteLine(prices2[0]);
+            // I expect prices2[0] to change to 20.5 because an array is a reference type,
+            // so the method can modify its elements.
             #endregion
 
 
@@ -91,9 +99,9 @@
             //
             // Question:
             // How is the result different from Question 5?
-
-
-
+            AddBonusPagesByRef(ref Pages);
+            Console.WriteLine($"No of pages : {Pages}");
+            //the pages changes from 400 to 450 because pages is passed by refrance
             #endregion
 
 
@@ -106,12 +114,12 @@
             //
             // Call it with your prices array.
             // Print prices.Length afterward.
-
-
+            ReplaceArray(ref prices2);
+            Console.WriteLine(prices2.Length);
 
             #endregion
 
-
+            Console.WriteLine("====================================================");
             // =========================
             // STRING QUESTIONS
             // =========================
@@ -126,8 +134,10 @@
             //
             // Print both title and upperTitle
             // to show that title did not change.
-
-
+            string title = "clean code";
+            string upperTitle = title.ToUpper();
+            Console.WriteLine(title);
+            Console.WriteLine(upperTitle);
 
             #endregion
 
@@ -140,7 +150,9 @@
             // Use ReferenceEquals()
             // to check if they point to the same object in memory.
 
-
+            string str1 = "Clean Code";
+            string str2 = "Clean Code";
+            Console.WriteLine(ReferenceEquals(str1,str2));
 
             #endregion
 
@@ -156,8 +168,10 @@
             //
             // Print the final result.
 
-
-
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("Book List");
+            stringBuilder.Append(" - Updated");
+            Console.WriteLine(stringBuilder);
             #endregion
 
 
@@ -171,7 +185,8 @@
             // "Library"
             //
             // Print the result.
-
+            stringBuilder.Replace("Book List", "Library");
+            Console.WriteLine(stringBuilder);
 
 
             #endregion
@@ -187,7 +202,9 @@
             //
             // using the + operator.
 
-
+            string Title = "Clean Code";
+            int pages = 464;
+            Console.WriteLine("Book: "+Title+ ", Pages: "+pages);
 
             #endregion
 
@@ -198,7 +215,7 @@
             //
             // using string interpolation:
             // $"..."
-
+            Console.WriteLine($"Book: {Title}, Pages: {pages}");
 
 
             #endregion
@@ -210,8 +227,8 @@
             //
             // using:
             // string.Format()
-
-
+            string sentence = string.Format("Book: {0}, Pages: {1}", Title, pages);
+            Console.WriteLine(sentence);
 
             #endregion
         }
@@ -219,22 +236,42 @@
         #region Methods
 
         // Question 3 method
-
+        public static void PrintWelcomeMessage() {
+            Console.WriteLine("Welcome to the Library!");
+               }
 
         // Question 4 method
-
+        public static void PrintBookTitle(string title)
+        {
+            Console.WriteLine($"Book title: {title}");
+        }
 
         // Question 5 method
-
+        public static int AddBonusPages(int pages)
+        {
+            pages += 50;
+            return pages;
+        }
 
         // Question 6 method
-
+        public static double ApplyDiscount(double[] prices)
+        {
+            prices[0] -= 5;
+            return prices[0];
+        }
 
         // Question 7 method
-
+        public static int AddBonusPagesByRef(ref int pages)
+        {
+            pages += 50;
+            return pages;
+        }
 
         // Question 8 method
-
+        public static void ReplaceArray(ref double[]prices2){
+            double[] arr = { 10.0, 12.5, 15.0 };
+            prices2=arr;
+        }
 
         #endregion
     }
