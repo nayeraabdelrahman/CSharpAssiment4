@@ -34,7 +34,7 @@ namespace Assiment4.String_And_Array
             // "Welcome to the Library!"
             // Call it from Main.
 
-            //PrintWelcomeMessage();
+            PrintWelcomeMessage();
 
             #endregion
 
@@ -230,18 +230,28 @@ namespace Assiment4.String_And_Array
         #region Methods
 
         // Question 3 method
-        void PrintWelcomeMessage() {
+        static void PrintWelcomeMessage() {
             Console.WriteLine("Welcome to the Library!");
                }
 
         // Question 4 method
-
+        void PrintBookTitle(string title)
+        {
+            Console.WriteLine($"Book title: {title}");
+        }
 
         // Question 5 method
-
+        void AddBonusPages(int pages)
+        {
+            pages += 50;
+        }
 
         // Question 6 method
-
+        double ApplyDiscount(double[] prices)
+        {
+            prices[0] -= 5;
+            return prices[0];
+        }
 
         // Question 7 method
 
