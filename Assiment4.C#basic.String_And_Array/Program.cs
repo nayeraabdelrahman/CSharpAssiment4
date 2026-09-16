@@ -45,7 +45,7 @@ namespace Assiment4.String_And_Array
             // "Book title: " + title
             // Call it with "Clean Code".
 
-
+            PrintBookTitle("Clean Code");
 
             #endregion
 
@@ -235,7 +235,7 @@ namespace Assiment4.String_And_Array
                }
 
         // Question 4 method
-        void PrintBookTitle(string title)
+        public static void PrintBookTitle(string title)
         {
             Console.WriteLine($"Book title: {title}");
         }
