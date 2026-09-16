@@ -81,8 +81,11 @@ namespace Assiment4.String_And_Array
             // Question:
             // What do you expect to see, and why?
 
-
-
+            double[] prices2 = { 25.5, 40.0 };
+            ApplyDiscount(prices2);
+            Console.WriteLine(prices2[0]);
+            // I expect prices2[0] to change to 20.5 because an array is a reference type,
+            // so the method can modify its elements.
             #endregion
 
 
@@ -95,9 +98,9 @@ namespace Assiment4.String_And_Array
             //
             // Question:
             // How is the result different from Question 5?
-
-
-
+            AddBonusPagesByRef(ref Pages);
+            Console.WriteLine($"No of pages : {Pages}");
+            //the pages changes from 400 to 450 because pages is passed by refrance
             #endregion
 
 
@@ -243,20 +246,25 @@ namespace Assiment4.String_And_Array
         }
 
         // Question 5 method
-        public static void AddBonusPages(int pages)
+        public static int AddBonusPages(int pages)
         {
             pages += 50;
+            return pages;
         }
 
         // Question 6 method
-        double ApplyDiscount(double[] prices)
+        public static double ApplyDiscount(double[] prices)
         {
             prices[0] -= 5;
             return prices[0];
         }
 
         // Question 7 method
-
+        public static int AddBonusPagesByRef(ref int pages)
+        {
+            pages += 50;
+            return pages;
+        }
 
         // Question 8 method
 
