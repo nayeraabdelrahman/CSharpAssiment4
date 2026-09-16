@@ -230,7 +230,7 @@ namespace Assiment4.String_And_Array
         #region Methods
 
         // Question 3 method
-        static void PrintWelcomeMessage() {
+        public static void PrintWelcomeMessage() {
             Console.WriteLine("Welcome to the Library!");
                }
 
