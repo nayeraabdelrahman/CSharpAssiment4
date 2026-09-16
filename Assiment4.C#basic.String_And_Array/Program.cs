@@ -61,9 +61,11 @@ namespace Assiment4.String_And_Array
             //
             // Question:
             // What do you expect to see, and why?
-
-
-
+            int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine($"No of pages : {pages}");
+            // I expect the result to be 400 because pages is passed by value,
+            // so the original variable does not change.
             #endregion
 
 
@@ -241,7 +243,7 @@ namespace Assiment4.String_And_Array
         }
 
         // Question 5 method
-        void AddBonusPages(int pages)
+        public static void AddBonusPages(int pages)
         {
             pages += 50;
         }
