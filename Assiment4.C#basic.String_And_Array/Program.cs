@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Diagnostics;
+using System.Text;
 
 namespace Assiment4.String_And_Array
 {
@@ -113,12 +114,12 @@ namespace Assiment4.String_And_Array
             //
             // Call it with your prices array.
             // Print prices.Length afterward.
-
-
+            ReplaceArray(ref prices2);
+            Console.WriteLine(prices2.Length);
 
             #endregion
 
-
+            Console.WriteLine("====================================================");
             // =========================
             // STRING QUESTIONS
             // =========================
@@ -267,7 +268,10 @@ namespace Assiment4.String_And_Array
         }
 
         // Question 8 method
-
+        public static void ReplaceArray(ref double[]prices2){
+            double[] arr = { 10.0, 12.5, 15.0 };
+            prices2=arr;
+        }
 
         #endregion
     }
